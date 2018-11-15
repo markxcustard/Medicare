@@ -1,0 +1,38 @@
+var reglas = {
+    fName: { required: true },
+    lName: { required: true },
+    street: { required: true },
+    city: { required: true },
+    zip: { required: true },
+    hPhone: { required: true },
+    email: { required: true },
+    gender: { required: true },
+    weight: { required: true },
+    smoker: { required: true },
+    toInsure: { required: true },
+    health_conditions: { required: true }
+};
+var mensajes = {
+    fName: { required: "Fname" },
+    lName: { required: "Lname" },
+    street: { required: "Street" },
+    city: { required: "city" },
+    zip: { required: "zip" },
+    hPhone: { required: "hphone" },
+    email: { required: "email" },
+    gender: { required: "gender" },
+    weight: { required: "*" },
+    smoker: { required: "smoker" },
+    toInsure: { required: "toInsure" },
+    health_conditions: { required: "*" }
+};
+
+
+$(document).ready(
+function () {
+    $("#health-quote").validate({
+        rules: reglas,
+        messages: mensajes
+    });
+
+});
